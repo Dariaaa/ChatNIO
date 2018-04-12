@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.ChatController">
+    <children>
+        <Pane maxHeight="800.0" maxWidth="400.0" minHeight="800.0" minWidth="400.0" nodeOrientation="LEFT_TO_RIGHT"
+              opacity="0.89" prefHeight="800.0" prefWidth="400.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <Button fx:id="sendButton" layoutX="300.0" layoutY="750.0" mnemonicParsing="false"
+                        prefHeight="50" prefWidth="100" text="Отправить" textAlignment="CENTER" textOverrun="CLIP" onAction="#sendMessage">
+                    <font>
+                        <Font name="Arial" size="14.0" />
+                    </font>
+                </Button>
+                <TextField fx:id="message" alignment="TOP_LEFT" layoutY="750.0" prefHeight="50.0" prefWidth="300.0" onAction="#onEnter" >
+                    <font>
+                        <Font name="Arial" size="14.0" />
+                    </font>
+                </TextField>
+                <ListView fx:id="messageList" prefHeight="750.0" prefWidth="400.0" />
+            </children>
+            <cursor>
+                <Cursor fx:constant="DEFAULT" />
+            </cursor>
+            <effect>
+                <Blend />
+            </effect>
+            <opaqueInsets>
+                <Insets />
+            </opaqueInsets>
+        </Pane>
+    </children>
+</AnchorPane>
