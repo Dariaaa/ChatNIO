@@ -60,6 +60,10 @@ class Client {
         clientReceiver = new ReceiveThread(channel, controllers);
         clientReceiver.start();
 
+        for (ChatController c : controllers) {
+            c.messageReceiver("Привет, " + clientName + "! Приятного общения)");
+        }
+
     }
 
 
